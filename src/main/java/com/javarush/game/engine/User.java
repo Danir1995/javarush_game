@@ -15,7 +15,7 @@ public class User {
     }
 
     public String useItem(int item){
-        return items.get(item);
+        return items.remove(item);
     }
 
     public void removeItems(){
