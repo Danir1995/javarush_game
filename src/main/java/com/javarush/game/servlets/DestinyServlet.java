@@ -12,9 +12,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
-
-@WebServlet(name = "Check", value = "/check")
-public class CheckEquipment extends HttpServlet {
+@WebServlet(name = "destiny", value = "/destiny")
+public class DestinyServlet extends HttpServlet {
     private UserRepository userRepository = null;
 
     @Override
@@ -28,13 +27,21 @@ public class CheckEquipment extends HttpServlet {
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         HttpSession session = req.getSession();
         User user = (User) session.getAttribute("user");
-
+        String destiny = req.getParameter("chance");
+        req.setAttribute("chance", destiny);
+        if (destiny.equals("pistol")){
+            getServletContext()
+                    .getRequestDispatcher("/park.jsp")
+                    .forward(req, resp);
+        }
         if (userRepository.isExists(user.getUserName())) {
             user = userRepository.fetchByUsername(user.getUserName());
-            session.setAttribute("equipment", user.getItems());
-        } else {
+            user.useItem(destiny);
+            getServletContext()
+                    .getRequestDispatcher("/deathByZombies.jsp")
+                    .forward(req, resp);
+        }else {
             throw new RuntimeException("user doesn't exist.");
         }
-        resp.sendRedirect("equipment.jsp");
     }
 }

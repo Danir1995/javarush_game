@@ -14,8 +14,8 @@ public class User {
         items.add(item);
     }
 
-    public String useItem(int item){
-        return items.remove(item);
+    public void useItem(String item){
+         items.remove(item);
     }
 
     public void removeItems(){
