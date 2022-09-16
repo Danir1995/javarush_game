@@ -16,6 +16,6 @@
 <p><IMG class="displayed" src = "https://www.seoulkoreatour.net/wp-content/uploads/2019/07/10112_hospital3.png" width = "400" height = "256"></p>
 <p>Do you want to enter?</p>
 <button class="btnGreen" onclick="window.location='hospital.jsp'">LET'S GO</button>
-<button class="btnRed" onclick="window.location='./gasoline'">NO, GO AWAY</button>
+<button class="btnRed" onclick="window.location='./gasoline.jsp'">NO, GO AWAY</button>
 </body>
 </html>

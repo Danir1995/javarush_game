@@ -14,6 +14,7 @@
 <body>
 <p>Oh no! I would never go inside! It is so scary...</p>
 <p>Ok. Let's walk a little to find somebody alive!</p>
+<p><IMG class="displayed" src = "https://i.pinimg.com/originals/31/7c/29/317c29fc5a72e5707e1437af70400d01.jpg" width = "400" height = "256"></p>
 <p>500 meters from hospital you found a gasoline station and an abandoned car.</p>
 <p>You checked a car and found a phone. You tried to turn it on.</p>
 <p>Oh my Lord! It has battery! (Thank you Elon Musk, for your modern phones "TeslaMob 1.6"!) </p>
