@@ -15,7 +15,9 @@
 <body>
 <p>Your equipment:</p>
 <c:forEach var="prod" items="${equipment}">
-    <p><c:out value="${prod}" /></p>
+
+    <p> <a href="$/destiny?chance=${prod}">${prod}</a></p>
+
 </c:forEach>
 </body>
 </html>
