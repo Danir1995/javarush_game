@@ -10,4 +10,4 @@ FROM tomcat
 
 EXPOSE 8080
 WORKDIR /webapps
-COPY target/javarush_game-1.0-SNAPSHOT.war /target/javarush_game-1.0.war
+COPY target/javarush_game-1.0-SNAPSHOT.war .javarush_game-1.0.war
