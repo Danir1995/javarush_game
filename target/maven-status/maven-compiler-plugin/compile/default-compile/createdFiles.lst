@@ -1,0 +1,7 @@
+com\javarush\game\engine\UserRepository.class
+com\javarush\game\servlets\AppContextListener.class
+com\javarush\game\engine\User.class
+com\javarush\game\servlets\CheckEquipment.class
+com\javarush\game\servlets\TakeItemServlet.class
+com\javarush\game\servlets\DestinyServlet.class
+com\javarush\game\servlets\StartServlet.class
