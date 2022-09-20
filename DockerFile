@@ -1,7 +1,7 @@
 FROM maven:latest as maven_builder
-RUN mkdir -p /apache-tomcat-9.0.65/apache-tomcat-9.0.65/webapps
-WORKDIR /webapps
-COPY pom.xml /webapps
+RUN mkdir -p /app
+WORKDIR /app
+COPY pom.xml /app
 RUN mvn -B dependency:resolve dependency:resolve-plugins
 COPY src /app/src
 RUN mvn package
@@ -9,5 +9,5 @@ RUN mvn package
 FROM tomcat
 
 EXPOSE 8080
-WORKDIR /webapps
+WORKDIR /app
 COPY --from=maven_builder target/javarush_game-1.0-SNAPSHOT.war .javarush_game-1.0.war
