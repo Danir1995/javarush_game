@@ -15,7 +15,7 @@ public class UserRepository {
         return users.get(username);
     }
 
-    public boolean isExists(String username)   {
+    public boolean isExists(String username){
         return users.containsKey(username);
     }
 
